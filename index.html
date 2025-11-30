@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/fancybox.css" />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="overlay" class="overlay"></div>
+    <div id="contact-modal" class="modal">
+      <button class="close-btn">
+        <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M8.00386 9.41816C7.61333 9.02763 7.61334 8.39447 8.00386 8.00395C8.39438 7.61342 9.02755 7.61342 9.41807 8.00395L12.0057 10.5916L14.5907 8.00657C14.9813 7.61605 15.6144 7.61605 16.0049 8.00657C16.3955 8.3971 16.3955 9.03026 16.0049 9.42079L13.4199 12.0058L16.0039 14.5897C16.3944 14.9803 16.3944 15.6134 16.0039 16.0039C15.6133 16.3945 14.9802 16.3945 14.5896 16.0039L12.0057 13.42L9.42097 16.0048C9.03045 16.3953 8.39728 16.3953 8.00676 16.0048C7.61624 15.6142 7.61624 14.9811 8.00676 14.5905L10.5915 12.0058L8.00386 9.41816Z"
+            fill="#fff"
+          />
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12ZM3.00683 12C3.00683 16.9668 7.03321 20.9932 12 20.9932C16.9668 20.9932 20.9932 16.9668 20.9932 12C20.9932 7.03321 16.9668 3.00683 12 3.00683C7.03321 3.00683 3.00683 7.03321 3.00683 12Z"
+            fill="#fff"
+          />
+        </svg>
+      </button>
+      <form action="send.php" method="POST" class="modal__form">
+        <h4 class="modal__title">Get in touch</h4>
+        <div class="modal__input-cont">
+          <svg width="64px" height="64px" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 7C9.65685 7 11 5.65685 11 4C11 2.34315 9.65685 1 8 1C6.34315 1 5 2.34315 5 4C5 5.65685 6.34315 7 8 7Z" fill="#77767b"></path>
+            <path d="M14 12C14 10.3431 12.6569 9 11 9H5C3.34315 9 2 10.3431 2 12V15H14V12Z" fill="#77767b"></path></svg
+          ><input type="text" name="name" placeholder="Name" class="modal__input" />
+        </div>
+        <div class="modal__input-cont">
+          <svg fill="#77767b" width="64px" height="64px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M0 10.375c0 0.938 0.344 1.969 0.781 3.063s1 2.125 1.438 2.906c1.188 2.063 2.719 4.094 4.469 5.781s3.813 3.094 6.125 3.938c1.344 0.531 2.688 1.125 4.188 1.125 0.75 0 1.813-0.281 2.781-0.688 0.938-0.406 1.781-1.031 2.094-1.781 0.125-0.281 0.281-0.656 0.375-1.094 0.094-0.406 0.156-0.813 0.156-1.094 0-0.156 0-0.313-0.031-0.344-0.094-0.188-0.313-0.344-0.563-0.5-0.563-0.281-0.656-0.375-1.5-0.875-0.875-0.5-1.781-1.063-2.563-1.469-0.375-0.219-0.625-0.313-0.719-0.313-0.5 0-1.125 0.688-1.656 1.438-0.563 0.75-1.188 1.438-1.625 1.438-0.219 0-0.438-0.094-0.688-0.25s-0.5-0.281-0.656-0.375c-2.75-1.563-4.594-3.406-6.156-6.125-0.188-0.313-0.625-0.969-0.625-1.313 0-0.406 0.563-0.875 1.125-1.375 0.531-0.469 1.094-1.031 1.094-1.719 0-0.094-0.063-0.375-0.188-0.781-0.281-0.813-0.656-1.75-0.969-2.656-0.156-0.438-0.281-0.75-0.313-0.906-0.063-0.094-0.094-0.219-0.125-0.375s-0.094-0.281-0.125-0.406c-0.094-0.281-0.25-0.5-0.406-0.625-0.156-0.063-0.531-0.156-0.906-0.188-0.375 0-0.813-0.031-1-0.031-0.094 0-0.219 0-0.344 0.031h-0.406c-1 0.438-1.719 1.313-2.25 2.344-0.5 1.031-0.813 2.188-0.813 3.219z"
+            ></path></svg
+          ><input type="tel" name="telephone" placeholder="Phone" class="modal__input" />
+        </div>
+        <button type="submit" class="modal__form-button">Send</button>
+      </form>
+    </div>
+    <header class="header">
+      <div class="container">
+        <div class="header__top">
+          <a href="/" aria-label="Home" class="header__logo"> <img src="img/logo.webp" alt="Logo" /> </a>
+          <a class="header__phone" href="tel:+16693010797">+1 (669) 301-0797</a>
+          <button class="header__modal-button btn-primary" data-modal="contact-modal">
+            <span>Call Back</span>
+          </button>
+        </div>
+      </div>
+      <nav class="header__nav">
+        <div class="container">
+          <div class="header__nav-list">
+            <a class="header__nav-item" href="/">Home</a>
+            <a class="header__nav-item" href="#about-us">About Us</a>
+            <a class="header__nav-item" href="#services">Services</a>
+            <a class="header__nav-item" href="#portfolio-galery">Galery</a>
+            <a class="header__nav-item" href="#reviews">Reviews</a>
+          </div>
+        </div>
+      </nav>
+      <div class="header__mobile">
+        <div class="container">
+          <a href="/" aria-label="Home" class="header__logo"> <img src="img/logo.webp" alt="Logo" /></a>
+          <button class="header__burger-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+      <nav class="header__mobile-nav">
+        <button class="header__mobile-nav-close">
+          <svg width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L12 10.5858L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289Z"
+              fill="#fff"
+            ></path>
+          </svg>
+        </button>
+        <div class="header__mobile-nav-list">
+          <a class="header__mobile-nav-list-item" href="/">Home</a>
+          <a class="header__mobile-nav-list-item" href="#about-us">About Us</a>
+          <a class="header__mobile-nav-list-item" href="#services">Services</a>
+          <a class="header__mobile-nav-list-item" href="#portfolio-galery">Galery</a>
+          <a class="header__mobile-nav-list-item" href="#reviews">Reviews</a>
+        </div>
+        <a href="tel:+16693010797" class="header__mobile-nav-number">+1 (669) 301-0797</a>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="container">
+          <div class="hero__left">
+            <h1 class="hero__title">Appliance repair in Santa Clara and Santa Cruz Counties</h1>
+            <button class="hero__button btn-primary" data-modal="contact-modal">
+              <span>Master's Consultation</span>
+            </button>
+          </div>
+          <div class="hero__right"><img src="img/hero-man.webp" alt="" /></div>
+        </div>
+      </section>
+      <section class="advantages" id="about-us">
+        <div class="container">
+          <div class="advantages__top">
+            <h2 class="advantages__title">Our Advantages</h2>
+            <p class="advantages__descr">
+              Good day, dear customer! We are grateful that you chose our company and are glad to welcome you to our website! We promise to provide our services at the highest level with maimum
+              efficiency.
+            </p>
+          </div>
+          <div class="advantages__bottom">
+            <div class="advantages__left">
+              <div class="advantages__cont-left">
+                <div class="advantages__cont-left-item">
+                  <svg width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="24" height="24" fill=""></rect>
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M5 9.5C5 7.01472 7.01472 5 9.5 5C11.9853 5 14 7.01472 14 9.5C14 11.9853 11.9853 14 9.5 14C7.01472 14 5 11.9853 5 9.5Z"
+                      fill="#e66100"
+                    ></path>
+                    <path
+                      d="M14.3675 12.0632C14.322 12.1494 14.3413 12.2569 14.4196 12.3149C15.0012 12.7454 15.7209 13 16.5 13C18.433 13 20 11.433 20 9.5C20 7.567 18.433 6 16.5 6C15.7209 6 15.0012 6.2546 14.4196 6.68513C14.3413 6.74313 14.322 6.85058 14.3675 6.93679C14.7714 7.70219 15 8.5744 15 9.5C15 10.4256 14.7714 11.2978 14.3675 12.0632Z"
+                      fill="#e66100"
+                    ></path>
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M4.64115 15.6993C5.87351 15.1644 7.49045 15 9.49995 15C11.5112 15 13.1293 15.1647 14.3621 15.7008C15.705 16.2847 16.5212 17.2793 16.949 18.6836C17.1495 19.3418 16.6551 20 15.9738 20H3.02801C2.34589 20 1.85045 19.3408 2.05157 18.6814C2.47994 17.2769 3.29738 16.2826 4.64115 15.6993Z"
+                      fill="#e66100"
+                    ></path>
+                    <path
+                      d="M14.8185 14.0364C14.4045 14.0621 14.3802 14.6183 14.7606 14.7837V14.7837C15.803 15.237 16.5879 15.9043 17.1508 16.756C17.6127 17.4549 18.33 18 19.1677 18H20.9483C21.6555 18 22.1715 17.2973 21.9227 16.6108C21.9084 16.5713 21.8935 16.5321 21.8781 16.4932C21.5357 15.6286 20.9488 14.9921 20.0798 14.5864C19.2639 14.2055 18.2425 14.0483 17.0392 14.0008L17.0194 14H16.9997C16.2909 14 15.5506 13.9909 14.8185 14.0364Z"
+                      fill="#e66100"
+                    ></path>
+                  </svg>
+                  <h3 class="advantages__cont-left-item-title">7+ years of experience</h3>
+                </div>
+                <div class="advantages__cont-left-item">
+                  <svg width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M3 8L5.72187 10.2682C5.90158 10.418 6.12811 10.5 6.36205 10.5H17.6379C17.8719 10.5 18.0984 10.418 18.2781 10.2682L21 8M6.5 14H6.51M17.5 14H17.51M8.16065 4.5H15.8394C16.5571 4.5 17.2198 4.88457 17.5758 5.50772L20.473 10.5777C20.8183 11.1821 21 11.8661 21 12.5623V18.5C21 19.0523 20.5523 19.5 20 19.5H19C18.4477 19.5 18 19.0523 18 18.5V17.5H6V18.5C6 19.0523 5.55228 19.5 5 19.5H4C3.44772 19.5 3 19.0523 3 18.5V12.5623C3 11.8661 3.18166 11.1821 3.52703 10.5777L6.42416 5.50772C6.78024 4.88457 7.44293 4.5 8.16065 4.5ZM7 14C7 14.2761 6.77614 14.5 6.5 14.5C6.22386 14.5 6 14.2761 6 14C6 13.7239 6.22386 13.5 6.5 13.5C6.77614 13.5 7 13.7239 7 14ZM18 14C18 14.2761 17.7761 14.5 17.5 14.5C17.2239 14.5 17 14.2761 17 14C17 13.7239 17.2239 13.5 17.5 13.5C17.7761 13.5 18 13.7239 18 14Z"
+                      stroke="#e66100"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                  <h3 class="advantages__cont-left-item-title">3 months warranty on labor and replacement parts</h3>
+                </div>
+                <div class="advantages__cont-left-item">
+                  <svg width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M14.2788 2.15224C13.9085 2 13.439 2 12.5 2C11.561 2 11.0915 2 10.7212 2.15224C10.2274 2.35523 9.83509 2.74458 9.63056 3.23463C9.53719 3.45834 9.50065 3.7185 9.48635 4.09799C9.46534 4.65568 9.17716 5.17189 8.69017 5.45093C8.20318 5.72996 7.60864 5.71954 7.11149 5.45876C6.77318 5.2813 6.52789 5.18262 6.28599 5.15102C5.75609 5.08178 5.22018 5.22429 4.79616 5.5472C4.47814 5.78938 4.24339 6.1929 3.7739 6.99993C3.30441 7.80697 3.06967 8.21048 3.01735 8.60491C2.94758 9.1308 3.09118 9.66266 3.41655 10.0835C3.56506 10.2756 3.77377 10.437 4.0977 10.639C4.57391 10.936 4.88032 11.4419 4.88029 12C4.88026 12.5581 4.57386 13.0639 4.0977 13.3608C3.77372 13.5629 3.56497 13.7244 3.41645 13.9165C3.09108 14.3373 2.94749 14.8691 3.01725 15.395C3.06957 15.7894 3.30432 16.193 3.7738 17C4.24329 17.807 4.47804 18.2106 4.79606 18.4527C5.22008 18.7756 5.75599 18.9181 6.28589 18.8489C6.52778 18.8173 6.77305 18.7186 7.11133 18.5412C7.60852 18.2804 8.2031 18.27 8.69012 18.549C9.17714 18.8281 9.46533 19.3443 9.48635 19.9021C9.50065 20.2815 9.53719 20.5417 9.63056 20.7654C9.83509 21.2554 10.2274 21.6448 10.7212 21.8478C11.0915 22 11.561 22 12.5 22C13.439 22 13.9085 22 14.2788 21.8478C14.7726 21.6448 15.1649 21.2554 15.3694 20.7654C15.4628 20.5417 15.4994 20.2815 15.5137 19.902C15.5347 19.3443 15.8228 18.8281 16.3098 18.549C16.7968 18.2699 17.3914 18.2804 17.8886 18.5412C18.2269 18.7186 18.4721 18.8172 18.714 18.8488C19.2439 18.9181 19.7798 18.7756 20.2038 18.4527C20.5219 18.2105 20.7566 17.807 21.2261 16.9999C21.6956 16.1929 21.9303 15.7894 21.9827 15.395C22.0524 14.8691 21.9088 14.3372 21.5835 13.9164C21.4349 13.7243 21.2262 13.5628 20.9022 13.3608C20.4261 13.0639 20.1197 12.558 20.1197 11.9999C20.1197 11.4418 20.4261 10.9361 20.9022 10.6392C21.2263 10.4371 21.435 10.2757 21.5836 10.0835C21.9089 9.66273 22.0525 9.13087 21.9828 8.60497C21.9304 8.21055 21.6957 7.80703 21.2262 7C20.7567 6.19297 20.522 5.78945 20.2039 5.54727C19.7799 5.22436 19.244 5.08185 18.7141 5.15109C18.4722 5.18269 18.2269 5.28136 17.8887 5.4588C17.3915 5.71959 16.7969 5.73002 16.3099 5.45096C15.8229 5.17191 15.5347 4.65566 15.5136 4.09794C15.4993 3.71848 15.4628 3.45833 15.3694 3.23463C15.1649 2.74458 14.7726 2.35523 14.2788 2.15224ZM12.5 15C14.1695 15 15.5228 13.6569 15.5228 12C15.5228 10.3431 14.1695 9 12.5 9C10.8305 9 9.47716 10.3431 9.47716 12C9.47716 13.6569 10.8305 15 12.5 15Z"
+                      fill="#e66100"
+                    ></path>
+                  </svg>
+                  <h3 class="advantages__cont-left-item-title">On-site repair service</h3>
+                </div>
+                <div class="advantages__cont-left-item">
+                  <svg width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M15.9 4.5C15.9 3 14.418 2 13.26 2c-.806 0-.869.612-.993 1.82-.055.53-.121 1.174-.267 1.93-.386 2.002-1.72 4.56-2.996 5.325V17C9 19.25 9.75 20 13 20h3.773c2.176 0 2.703-1.433 2.899-1.964l.013-.036c.114-.306.358-.547.638-.82.31-.306.664-.653.927-1.18.311-.623.27-1.177.233-1.67-.023-.299-.044-.575.017-.83.064-.27.146-.475.225-.671.143-.356.275-.686.275-1.329 0-1.5-.748-2.498-2.315-2.498H15.5S15.9 6 15.9 4.5zM5.5 10A1.5 1.5 0 0 0 4 11.5v7a1.5 1.5 0 0 0 3 0v-7A1.5 1.5 0 0 0 5.5 10z"
+                      fill="#e66100"
+                    ></path>
+                  </svg>
+                  <h3 class="advantages__cont-left-item-title">Original spare parts</h3>
+                </div>
+              </div>
+            </div>
+            <div class="advantages__right">
+              <img src="img/advantages-img.webp" loading="lazy" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="bg-container">
+        <section class="services" id="services">
+          <div class="container">
+            <div class="services__container">
+              <div class="services__container-item">
+                <h3 class="services__subtitle">What we do?</h3>
+                <h2 class="services__title">We&nbsp;repair</h2>
+                <button class="btn-primary services__btn" data-modal="contact-modal">
+                  <span>Order service</span>
+                </button>
+              </div>
+              <div class="services__container-item">
+                <img src="img/services/washing-machines.webp" alt="Washing Machines" class="services__item-img" loading="lazy" />
+                <h3 class="services__item-title">Washing Machines</h3>
+              </div>
+              <div class="services__container-item">
+                <img src="img/services/dryers.webp" alt="Dryers" class="services__item-img" loading="lazy" />
+                <h3 class="services__item-title">Dryers</h3>
+              </div>
+              <div class="services__container-item">
+                <img src="img/services/dishwashers.webp" alt="Dishwashers" class="services__item-img" />
+                <h3 class="services__item-title">Dishwashers</h3>
+              </div>
+              <div class="services__container-item">
+                <img src="img/services/microwaves.webp" alt="Microwaves" class="services__item-img" loading="lazy" />
+                <h3 class="services__item-title">Microwaves</h3>
+              </div>
+              <div class="services__container-item">
+                <img src="img/services/refrigerators.webp" alt="Refrigerators" class="services__item-img" loading="lazy" />
+                <h3 class="services__item-title">Refrigerators</h3>
+              </div>
+              <div class="services__container-item">
+                <img src="img/services/electric-ranges.webp" alt="Electric Ranges" class="services__item-img" loading="lazy" />
+                <h3 class="services__item-title">Electric Ranges</h3>
+              </div>
+              <div class="services__container-item">
+                <img src="img/services/ranges.webp" alt="Ranges" class="services__item-img" loading="lazy" />
+                <h3 class="services__item-title">Ranges</h3>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="portfolio" id="portfolio-galery">
+          <div class="container">
+            <ul class="portfolio__list">
+              <li class="portfolio__item">
+                <img src="img/portfolio/1.webp" alt="Portfolio item" loading="lazy" />
+                <button class="portfolio__zoom" data-fancybox="gallery" data-src="img/portfolio/1.webp">
+                  <svg width="30" height="30">
+                    <use href="#zoom-icon"></use>
+                  </svg>
+                </button>
+              </li>
+              <li class="portfolio__item">
+                <img src="img/portfolio/2.webp" alt="Portfolio item" loading="lazy" />
+                <button class="portfolio__zoom" data-fancybox="gallery" data-src="img/portfolio/2.webp">
+                  <svg width="30" height="30">
+                    <use href="#zoom-icon"></use>
+                  </svg>
+                </button>
+              </li>
+              <li class="portfolio__item">
+                <img src="img/portfolio/3.webp" alt="Portfolio item" loading="lazy" />
+                <button class="portfolio__zoom" data-fancybox="gallery" data-src="img/portfolio/3.webp">
+                  <svg width="30" height="30">
+                    <use href="#zoom-icon"></use>
+                  </svg>
+                </button>
+              </li>
+              <li class="portfolio__item">
+                <img src="img/portfolio/4.webp" alt="Portfolio item" loading="lazy" />
+                <button class="portfolio__zoom" data-fancybox="gallery" data-src="img/portfolio/4.webp">
+                  <svg width="30" height="30">
+                    <use href="#zoom-icon"></use>
+                  </svg>
+                </button>
+              </li>
+              <li class="portfolio__item">
+                <img src="img/portfolio/5.webp" alt="Portfolio item" loading="lazy" />
+                <button class="portfolio__zoom" data-fancybox="gallery" data-src="img/portfolio/5.webp">
+                  <svg width="30" height="30">
+                    <use href="#zoom-icon"></use>
+                  </svg>
+                </button>
+              </li>
+              <li class="portfolio__item">
+                <img src="img/portfolio/6.webp" alt="Portfolio item" loading="lazy" />
+                <button class="portfolio__zoom" data-fancybox="gallery" data-src="img/portfolio/6.webp">
+                  <svg width="30" height="30">
+                    <use href="#zoom-icon"></use>
+                  </svg>
+                </button>
+              </li>
+              <li class="portfolio__item">
+                <img src="img/portfolio/7.webp" alt="Portfolio item" loading="lazy" />
+                <button class="portfolio__zoom" data-fancybox="gallery" data-src="img/portfolio/7.webp">
+                  <svg width="30" height="30">
+                    <use href="#zoom-icon"></use>
+                  </svg>
+                </button>
+              </li>
+              <li class="portfolio__item">
+                <img src="img/portfolio/8.webp" alt="Portfolio item" loading="lazy" />
+                <button class="portfolio__zoom" data-fancybox="gallery" data-src="img/portfolio/8.webp">
+                  <svg width="30" height="30">
+                    <use href="#zoom-icon"></use>
+                  </svg>
+                </button>
+              </li>
+              <li class="portfolio__item">
+                <img src="img/portfolio/9.webp" alt="Portfolio item" loading="lazy" />
+                <button class="portfolio__zoom" data-fancybox="gallery" data-src="img/portfolio/9.webp">
+                  <svg width="30" height="30">
+                    <use href="#zoom-icon"></use>
+                  </svg>
+                </button>
+              </li>
+              <li class="portfolio__item">
+                <img src="img/portfolio/10.webp" alt="Portfolio item" loading="lazy" />
+                <button class="portfolio__zoom" data-fancybox="gallery" data-src="img/portfolio/10.webp">
+                  <svg width="30" height="30">
+                    <use href="#zoom-icon"></use>
+                  </svg>
+                </button>
+              </li>
+              <li class="portfolio__item">
+                <img src="img/portfolio/11.webp" alt="Portfolio item" loading="lazy" />
+                <button class="portfolio__zoom" data-fancybox="gallery" data-src="img/portfolio/11.webp">
+                  <svg width="30" height="30">
+                    <use href="#zoom-icon"></use>
+                  </svg>
+                </button>
+              </li>
+              <li class="portfolio__item">
+                <img src="img/portfolio/12.webp" alt="Portfolio item" loading="lazy" />
+                <button class="portfolio__zoom" data-fancybox="gallery" data-src="img/portfolio/12.webp">
+                  <svg width="30" height="30">
+                    <use href="#zoom-icon"></use>
+                  </svg>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <!-- <section class="reviews" id="reviews">
+          <div class="container">
+            <h2 class="reviews__title">Reviews</h2>
+            <div class="reviews__subtitle-cont">
+              <div class="reviews__subtitle-line"></div>
+              <h3 class="reviews__subtitle">Our Customers’</h3>
+              <div class="reviews__subtitle-line"></div>
+            </div>
+            <div class="reviews__swipper">
+              <button id="prev">
+                <svg width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5 12H19M5 12L11 6M5 12L11 18" stroke="#e66100" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </button>
+              <div class="siema">
+                <div>
+                  <img src="img/reviews/1.webp" alt="" class="reviews__swipper-item-img" />
+                  <h3 class="reviews__swipper-item-name">Emily R.</h3>
+                  <p class="reviews__swipper-item-text">Really happy with how everything turned out. Friendly and quick service</p>
+                </div>
+                <div>
+                  <img src="img/reviews/2.webp" alt="" class="reviews__swipper-item-img" />
+                  <h3 class="reviews__swipper-item-name">Michael S.</h3>
+                  <p class="reviews__swipper-item-text">Great experience, they knew exactly what to do. Totally recommend</p>
+                </div>
+                <div>
+                  <img src="img/reviews/3.webp" alt="" class="reviews__swipper-item-img" />
+                  <h3 class="reviews__swipper-item-name">Sarah L.</h3>
+                  <p class="reviews__swipper-item-text">Everything went smoothly. Nice people and really professional.</p>
+                </div>
+                <div>
+                  <img src="img/reviews/4.webp" alt="" class="reviews__swipper-item-img" />
+                  <h3 class="reviews__swipper-item-name">David K.</h3>
+                  <p class="reviews__swipper-item-text">Super happy I called them. They made it easy and stress-free.</p>
+                </div>
+                <div>
+                  <img src="img/reviews/5.webp" alt="" class="reviews__swipper-item-img" />
+                  <h3 class="reviews__swipper-item-name">Olivia M.</h3>
+                  <p class="reviews__swipper-item-text">Fast, friendly, and got the job done right the first time.</p>
+                </div>
+                <div>
+                  <img src="img/reviews/6.webp" alt="" class="reviews__swipper-item-img" />
+                  <h3 class="reviews__swipper-item-name">James P.</h3>
+                  <p class="reviews__swipper-item-text">Couldn’t ask for better service. Honest and reliable.</p>
+                </div>
+                <div>
+                  <img src="img/reviews/7.webp" alt="" class="reviews__swipper-item-img" />
+                  <h3 class="reviews__swipper-item-name">Chloe T.</h3>
+                  <p class="reviews__swipper-item-text">Very pleased! Everyone was polite and helpful.</p>
+                </div>
+                <div>
+                  <img src="img/reviews/7.webp" alt="" class="reviews__swipper-item-img" />
+                  <h3 class="reviews__swipper-item-name">Daniel W.</h3>
+                  <p class="reviews__swipper-item-text">Everything done quickly and without any hassle. Will call again</p>
+                </div>
+              </div>
+              <button id="next">
+                <svg width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5 12H19M5 12L11 6M5 12L11 18" stroke="#e66100" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </button>
+            </div>
+            <button class="reviews__btn btn-secondary" data-modal="reviews-modal">Leave a review</button>
+          </div>
+        </section> -->
+      </div>
+      <section class="text-section">
+        <div class="container">
+          <div class="text-section__accordion">
+            <div class="text-section__accordion-content hidden" id="text-section__accordion-content">
+              <p>
+                At Marian Appliance Repair, we believe that great service comes from experience, honesty, and genuine care for our customers. We’re a small, locally owned appliance repair company
+                proudly serving Santa Clara and Santa Cruz Counties. With over 7 years of hands-on experience, we’ve built our reputation by providing dependable repairs, fair pricing, and friendly
+                service you can count on.
+              </p>
+              <p>
+                We may be a small team, but we bring the skill and dedication of a large company. Every job is handled personally by an experienced technician who truly cares about getting your
+                appliances back to working order. We specialize in repairing refrigerators, washers, dryers, dishwashers, ovens, and other major home appliances — from all major brands.
+              </p>
+              <p>
+                Our mission is simple: <br />
+                To provide honest, high-quality repair service that helps homeowners save money and avoid the stress of unexpected appliance breakdowns. We take pride in offering clear communication,
+                transparent estimates, and reliable workmanship backed by warranty on parts and labor.
+              </p>
+              <p>
+                At Marian Appliance Repair, we understand that your time and comfort matter. That’s why we respond quickly, diagnose accurately, and repair efficiently — so you can get back to your
+                daily routine with confidence. We value every customer and treat every home as if it were our own.
+              </p>
+              <p>When you choose us, you’re not just hiring a technician — you’re partnering with a local expert who truly cares about your satisfaction.</p>
+              <p>Marian Appliance Repair — reliable service, professional results, and the personal attention only a small local business can provide.</p>
+            </div>
+            <button class="text-section__accordion-btn" id="text-section__accordion-btn">Show more</button>
+          </div>
+        </div>
+      </section>
+      <section class="cta">
+        <div class="container">
+          <h2 class="cta__title">Need fast appliance repair?</h2>
+          <p class="cta__text">Call now — technician available today.</p>
+          <a href="tel:+16693010797" class="btn-secondary cta__btn">Call (669) 301-0797</a>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__top">
+        <div class="container">
+          <a href="/" aria-label="Home" class="footer__name-title">Marian Appliance Repair Tech</a>
+          <a class="footer__phone" href="tel:+16693010797">+1 (669) 301-0797</a>
+          <button class="footer__modal-button btn-primary" data-modal="contact-modal">Call Back</button>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="container">
+          <div class="copyright">All rights reserved © 2025</div>
+        </div>
+      </div>
+    </footer>
+
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+      <symbol id="zoom-icon" viewBox="0 0 24 24">
+        <path
+          d="M16.6725 16.6412L21 21M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z"
+          stroke="#fff"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          fill="none"
+        />
+      </symbol>
+    </svg>
+
+    <script src="js/siema.min.js"></script>
+    <script src="js/fancybox.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
